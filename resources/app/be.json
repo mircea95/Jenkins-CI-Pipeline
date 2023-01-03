@@ -1,0 +1,10 @@
+{
+    "checkInSonar": "${maven}\\mvn -DskipTests verify sonar:sonar -Dsonar.projectKey=${projectName} -Dsonar.projectName=${projectName}",
+    "unitTests":"${maven}\\mvn test -Punit-test",
+    "buildApp":"${maven}\\mvn clean -DskipTests package",
+    "integrationTests":"${maven}\\mvn test -Pintegration-test",
+    "projectURL": "https://gitlab.demo.think-it.work/training-licenses-sharing/training_licenses_sharing_be.git",
+    "version":{
+        "file": "pom.xml"
+    }
+}

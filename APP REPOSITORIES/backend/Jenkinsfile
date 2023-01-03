@@ -1,0 +1,2 @@
+@Library('training-licenses-shared@CIPipeline') _
+servicePrPipeline()

@@ -1,0 +1,10 @@
+{
+    "checkInSonar": "${nodejs}\\sonar-scanner -Dsonar.projectKey=${projectName} -Dsonar.sources=. -Dsonar.projectName=${projectName} -Dsonar.javascript.lcov.reportPaths=./coverage/training-license-fe/lcov-report/lcov.info -Dsonar.exclusions=src/**/*.spec.ts,server/**,src/test.ts",
+    "unitTests":"${nodejs}\\npm install --legacy-peer-deps && ng test --code-coverage --watch=false --browsers=ChromeHeadlessCI",
+    "buildApp":"${nodejs}\\sed -i 's#http://localhost:3000#https://$API_URL#g' ./src/config.json && npm install --legacy-peer-deps && ng build",
+    "integrationTests":"echo 'No integration test for frontend'",
+    "projectURL": "https://gitlab.demo.think-it.work/training-licenses-sharing/training-licenses-sharing-fe.git",
+    "version":{
+        "file": "package.json"
+    }
+}
